@@ -14,7 +14,7 @@ def procurarSenha(zip,file,email):
     comando = ["libs\\7za.exe", "e", zip,file,email,"-so"]
     resultado = subprocess.run(comando,capture_output=True,text=True)
     if email in resultado.stdout:
-        print(f"{palavra}")
+        print(f"{email}")
     else:
         print("Nada encontrado")
 if admin():
